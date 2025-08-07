@@ -14,4 +14,8 @@
     <Folder Include="Localization\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonLibraryP\CommonLibraryP\CommonLibraryP.csproj" />
+  </ItemGroup>
+
 </Project>
