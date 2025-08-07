@@ -1,0 +1,20 @@
+﻿<link href="_content/CommonLibraryP/lib/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+<div class="card p-2">
+    <DxMenu Orientation="@Orientation.Horizontal" CssClass="menu" ItemsPosition="ItemPosition.Center">
+        <Items>
+            <DxMenuItem NavigateUrl="/" IconCssClass="oi oi-home" Position="ItemPosition.Start"/>
+            <DxMenuItem Text="@(machineLocalizer["Machine"])" IconCssClass="oi oi-laptop">
+                <Items>
+                    <DxMenuItem Text="@(machineLocalizer["Connection"])" NavigateUrl="/MachineSetting" IconCssClass="oi oi-rss" />
+                    <DxMenuItem Text="@(machineLocalizer["Tag"])" NavigateUrl="/TagSetting" IconCssClass="oi oi-tags" />
+                </Items>
+                </DxMenuItem>
+            <DxMenuItem Text="@(mapLocalizer["Map"])" IconCssClass="oi oi-map">
+                <Items>
+                    <DxMenuItem Text="@(mapLocalizer["Image"])" NavigateUrl="/MapSetting" IconCssClass="bi bi-image" />
+                </Items>
+            </DxMenuItem>                                    
+        </Items>
+    </DxMenu>
+</div>

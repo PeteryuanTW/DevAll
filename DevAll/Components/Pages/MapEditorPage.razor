@@ -1,0 +1,15 @@
+﻿@page "/MapEditor/{Id}"
+@inject MapService mapService
+
+<MapEditor MapConfigId="@Id"/>
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = null!;
+    // private MapConfig? mapConfig;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     mapConfig = await mapService.GetMapAndComponentsById(Id);
+    // }
+}

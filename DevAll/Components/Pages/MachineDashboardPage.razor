@@ -1,0 +1,16 @@
+﻿@page "/MachineDashboard/{Id}"
+@inject MachineService machineService
+
+<MachineDashboard MachineId="@Id" />
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = null!;
+    // private Machine? machine;
+
+    // protected override Task OnInitializedAsync()
+    // {
+    //     machine = machineService.GetMachineByID(new Guid(Id));
+    //     return base.OnInitializedAsync();
+    // }
+}

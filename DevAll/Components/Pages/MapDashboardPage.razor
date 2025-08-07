@@ -1,0 +1,18 @@
+﻿@page "/MapDashboard/{Id}"
+@inject MapService mapService
+@rendermode InteractiveServer
+
+<MapDashboard MapConfigParam="@mapConfig" />
+
+@code {
+    [Parameter]
+    public string Id { get; set; } = null!;
+    private MapConfig? mapConfig;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        mapConfig = await mapService.GetMapAndComponentsById(Id);
+        await base.OnInitializedAsync();
+    }
+}
