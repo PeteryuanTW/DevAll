@@ -14,7 +14,12 @@
                 <Items>
                     <DxMenuItem Text="@(mapLocalizer["Image"])" NavigateUrl="/MapSetting" IconCssClass="bi bi-image" />
                 </Items>
-            </DxMenuItem>                                    
+            </DxMenuItem>
+            <DxMenuItem Text="@(machineLocalizer["Report"])" IconCssClass="bi bi-clipboard-data">
+                <Items>
+                    <DxMenuItem Text="@(machineLocalizer["Utilization Rate"])" NavigateUrl="/MachineUtilization" IconCssClass="bi bi-pie-chart" />
+                </Items>
+            </DxMenuItem>
         </Items>
     </DxMenu>
 </div>
